@@ -26,6 +26,9 @@ assets：附件的存放位置
 
 配置文件报错，检查缩进，使用空格不要用tab。
 
+# 编译调试
+jekyll build --trace
+jekyll server
 
 ----
 <br />

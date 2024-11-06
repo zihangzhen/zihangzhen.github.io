@@ -2,11 +2,19 @@ main:
   - title: 'SemantiChain: A Trust Retrieval Blockchain based on Semantic Sharding'
     authors: <strong><u>Zihang Zhen</u></strong>; Xiaoding Wang; Xu Yang; Jiwu Shu; Jia Hu; Hui Lin; Xun Yi
     journal_short: IEEE TIFS
-    journal: IEEE Transactions on Information Forensics & Security <strong>(TIFS)</strong>, 2025.
+    journal: IEEE Transactions on Information Forensics & Security <strong>(TIFS)</strong>, 2024.
     pdf: ./assets/files/SemantiChain-tifs.pdf
-    doi: https://zanez.top
+    doi: https://doi.org/10.1109/TIFS.2024.3488501
     bibtex: |
-            Update later...
+            @article{10741559,
+            author={Zhen, Zihang and Wang, Xiaoding and Yang, Xu and Shu, Jiwu and Hu, Jia and Lin, Hui and Yi, Xun},
+            journal={IEEE Transactions on Information Forensics and Security},
+            title={SemantiChain: A Trust Retrieval Blockchain based on Semantic Sharding},
+            year={2024},
+            volume={},
+            number={},
+            pages={1-1},
+            }
     image: ./assets/teaser/SemantiChain-tifs.jpg
     notes: CCF-A, SCI-Q1, IF6.3
 
@@ -46,4 +54,4 @@ main:
               publisher={Elsevier}
             }
     image: ./assets/teaser/dssbd-jnca.jpg
-    notes: SCI-Q1, CCF-C, IF8.7
+    notes: CCF-C, SCI-Q1, IF8.7

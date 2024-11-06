@@ -1,6 +1,6 @@
 <h1 id="publications"></h1>
 
-<h2 style="margin: 60px 0px -15px;">Publications <temp style="font-size:15px;">[</temp><a href="{{ site.google_scholar }}" target="_blank" style="font-size:15px;">Google Scholar</a><temp style="font-size:15px;">]</temp></h2>
+<h2 style="margin: 60px 0px -15px;">Publications</h2>
 
 
 <div class="publications">
@@ -20,22 +20,22 @@
       <div class="periodical"><em>{{ link.conference}} {{link.journal}}</em>
       </div>
     <div class="links">
-      {% if link.pdf %} 
+      {% if link.pdf %}
       <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
       {% endif %}
-      {% if link.code %} 
+      {% if link.code %}
       <a href="{{ link.code }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
       {% endif %}
-      {% if link.page %} 
+      {% if link.page %}
       <a href="{{ link.page }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project Page</a>
       {% endif %}
-      {% if link.bibtex %} 
+      {% if link.bibtex %}
       <button class="bibtex" role="button" target="_blank" style="font-size:12.5px;" onclick="copyToClipboard(`{{ link.bibtex }}`)">BibTex</button>
       {% endif %}
-      {% if link.notes %} 
+      {% if link.notes %}
       <strong style="color:#002D72">{{ link.notes }}</strong>
       {% endif %}
-      {% if link.others %} 
+      {% if link.others %}
       {{ link.others }}
       {% endif %}
     </div>
