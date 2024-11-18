@@ -1,6 +1,6 @@
 # 💬 Services
 <ul style="margin:0 0 5px;">
-  <li>Reviewer for <a href="https://www2.cloud.editorialmanager.com/jnca/default.aspx">JNCA</a>, <a href="https://www.editorialmanager.com/comcom/Default.aspx">ComCom</a>.</li>
+  <li>Reviewer for <a href="https://www2.cloud.editorialmanager.com/jnca/default.aspx">JNCA(2023,2024)</a>, <a href="https://www.editorialmanager.com/comcom/Default.aspx">ComCom(2024)</a>.</li>
   <li>Teaching assistant for <em>Machine Learning</em>(Fall 2024), <em>Computer Networks</em>(Fall 2023).</li>
 </ul>
 

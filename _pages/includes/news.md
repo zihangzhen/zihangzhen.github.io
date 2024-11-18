@@ -6,8 +6,6 @@
   <li><strong>[{{ link.date }}]</strong> {{ link.msg }}</li>
   {% endif %}
   {% endfor %}
-  <!-- <li id="toggleLink"><a href="javascript:toggle_vis('newsmore')">Show More</a></li> -->
-  <li id="toggleButton"><button data-id="newsmore" onclick="toggle_vis('newsmore')">Show More</button></li>
 
   <div id="newsmore" style="display:none">
     {% for link in site.data.news.main %}
@@ -16,4 +14,5 @@
     {% endif %}
     {% endfor %}
   </div>
+  <button  class="small-ios-btn" data-id="newsmore" onclick="toggle_vis('newsmore')">Show More</button>
 </ul>

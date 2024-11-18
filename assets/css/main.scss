@@ -46,8 +46,8 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    // border-bottom: 1px #efefef solid;
-    padding: 1em 0 1em 0;
+    border-bottom: 1px #efefef solid;
+    padding: 2em 0 2em 0;
 
 
     .paper-box-image{
@@ -56,29 +56,26 @@
         width: 100%;
         order: 2;
         img {
-            max-width: 350px;
+            max-width: 200px;
             box-shadow: 3px 3px 6px #888;
             object-fit: cover;
-            border-radius: 5%; /* 添加圆角样式 */
+            border-radius: 7%; /* 添加此行以设置圆角 */
         }
     }
 
     .paper-box-text{
-        justify-content: left;
-        padding-left: 2em;
-        max-width: 60%;
-        order: 2;
-        margin: 0;
-        position: relative;
+        max-width: 100%;
+        order: 1;
 
+        /* 添加竖线 */
         &::before {
-            content: '';
+            content: ''; /* 必须有content属性，即使为空 */
             position: absolute;
+            left: -20px; /* 调整竖线与文本之间的距离 */
             top: 0;
             bottom: 0;
-            left: 0;
-            width: 1px;
-            background-color: #efefef;
+            width: 1px; /* 竖线的宽度 */
+            background-color: #efefef; /* 竖线的颜色 */
         }
     }
 
@@ -86,30 +83,23 @@
         .paper-box-image{
             justify-content: left;
             min-width: 200px;
-            max-width: 30%;
+            max-width: 25%;
             order: 1;
         }
 
         .paper-box-text{
             justify-content: left;
             padding-left: 2em;
-            max-width: 70%;
+            max-width: 75%;
             order: 2;
-            margin: 0;
-            position: relative;
 
+            /* 在响应式布局中调整竖线的位置 */
             &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                width: 1px;
-                background-color: #efefef;
+                left: -2%; /* 根据需要调整距离 */
             }
         }
-    }
 
+    }
 
 }
 
@@ -146,10 +136,11 @@ a {
     text-decoration: none !important; /* 取消超链接下划线 */
 }
 
+// 按钮风格
 .small-btn {
     background-color: #ffffff; /* 设置按钮背景颜色为白色 */
     color: #333333; /* 设置按钮文字颜色为深灰色 */
-    padding: 8px 15px; /* 设置较小的按钮内边距 */
+    padding: 8px 14px; /* 设置较小的按钮内边距 */
     border: 1px solid #cccccc; /* 添加按钮边框 */
     border-radius: 5px; /* 设置按钮边框圆角 */
     font-size: 12px; /* 设置较小的按钮文字大小 */
@@ -159,6 +150,25 @@ a {
 }
 
 .small-btn:hover {
-    box-shadow: 0 4px 8px rgba(35, 36, 36, 0.1); /* 鼠标悬停时按钮阴影效果变化 */
+    background-color: #f9f9fa; /* 稍微深一点的背景色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 更深的阴影 */
 }
 
+
+.small-ios-btn {
+    margin-top: 10px;
+    background-color: white; /* 白色背景 */
+    color: #6c757d; /* 灰色文字 */
+    border: 1px solid #e5e5ea; /* 浅灰色边框 */
+    padding: 6px 12px; /* 减少内边距 */
+    border-radius: 12px; /* 减少圆角半径 */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 模拟浅影 */
+    font-size: 12px; /* 设置字体大小为12px */
+  }
+
+  .small-ios-btn:hover {
+    background-color: #f9f9fa; /* 稍微深一点的背景色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 更深的阴影 */
+  }

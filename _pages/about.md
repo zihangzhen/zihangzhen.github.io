@@ -23,11 +23,11 @@ redirect_from:
 
 
 
-{% include_relative news.md %}
+{% include_relative includes/news.md %}
 
-{% include_relative publications.md %}
+{% include_relative includes/publications.md %}
 
-{% include_relative services.md %}
+{% include_relative includes/services.md %}
 
 
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=828384&w=800&t=n&d=X1hE1r5O27mChe6EsSHp4RTz-niIHZKgJQQ2nT5mJ5k&co=ffffff&ct=000000&cmo=b8c5cb&cmn=77bbdb'></script>
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=828384&w=550&t=n&d=X1hE1r5O27mChe6EsSHp4RTz-niIHZKgJQQ2nT5mJ5k&co=ffffff&ct=000000&cmo=3a97c2&cmn=DF7983'></script>
