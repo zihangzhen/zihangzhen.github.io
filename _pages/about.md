@@ -17,9 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-<!-- Zihang Zhen 当前是一个华中科技大学的博士研究生,他的研究方向为**推荐系统**和**大语言模型**,师从Rui Zhang教授. 在此之前,他在福建师范大学获得了硕士学位,师从Hui Lin教授和Xiaoding Wang副教授,期间主要从事**区块链**和**机器学习**的相关研究. 另外,他拥有一年以上的**嵌入式软件开发**实践经验. 目前,他发表了多篇期刊,并担任部分期刊的审稿人. -->
-
-*Zihang Zhen* is currently a Ph.D. student at Huazhong University of Science and Technology, specializing in **Recommendation Systems** and **Large Language Models**, under the supervision of Prof. *[Rui Zhang](https://www.ruizhang.info/)*. Prior to this, he obtained his M.S. degree from Fujian Normal University under the supervision of Prof. *[Hui Lin](https://ccs.fjnu.edu.cn/0d/98/c16741a331160/page.htm)* and Associate Prof. *[Xiaoding Wang](https://xiaodingwang.github.io/WangXiaoding.github.io/)*, focusing on research related to **Blockchain** and **Machine Learning**. Besides, he has over a year of experience in **Embedded Software Development**. Currently, he has published several papers in CCF-A and SCI-Q1 journals and serves as a reviewer for some of them.
+*Zihang Zhen* is currently a Ph.D. student at Huazhong University of Science and Technology (HUST), under the supervision of Prof. *[Rui Zhang](https://www.ruizhang.info/)*. His research interests focus on **Recommendation Systems** and **Large Language Models**. Previously, he earned a master's degree from Fujian Normal University, where he studied under the guidance of Prof. *[Hui Lin](https://ccs.fjnu.edu.cn/0d/98/c16741a331160/page.htm)* and Associate Prof. *[Xiaoding Wang](https://xiaodingwang.github.io/WangXiaoding.github.io/)*, focusing on **Blockchain** and **Machine Learning**. To date, he has published several papers in CCF-A and SCI-Q1 journals and serves as a reviewer for them. In addition, his interests extend to **Embedded Software Development** and **Network Security**, areas in which he possesses substantial engineering experience.
 
 
 
