@@ -1,25 +1,30 @@
-# main links links
 main:
-  - title: "About"
-    url: "/#about-me"
+  - title: "Home"
+    url: ./
+    toggle: none
 
   - title: "News"
-    url: "/#-news"
+    url: ./news
+    toggle: navbarToggle
 
   - title: "Publications"
-    url: "/#-publications"
+    url: ./publications
+    toggle: none
 
-  - title: "Services"
-    url: "/#-services"
+  # - title: "Contact"
+  #   url: ./contact 
+  #   toggle: none
+  #   right: true 
 
-  # - title: "Honors and Awards"
-  #   url: "/#-honors-and-awards"
+  # - title: "Services"
+  #  url: ./#services
+  #  toggle: none  
 
-  # - title: "Educations"
-  #   url: "/#-educations"
+  #- title: "Talks"
+  #  url: ./#invited-talks
+  #  toggle: none  
 
-  # - title: "Invited Talks"
-  #   url: "/#-invited-talks"
+  #- title: "Teaching"
+  #  url: ./#teaching
+  #  toggle: none  
 
-  # - title: "Internships"
-  #   url: "/#-internships"

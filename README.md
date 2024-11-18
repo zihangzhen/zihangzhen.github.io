@@ -1,72 +1,36 @@
+# zanezii.github.io
 
-<h1 align="center">
-Acadpages
-</h1>
+This is the latest version of my homepage's source code. Feel free to use and share.
 
-<p align="center">A Modern and Responsive Academic Personal Homepage</p>
+----
+data:文件夹中的yml配置文件
+    navigation：配置导航地址和页面，跳转到根目录对应的`md`文件
+    publications:配置出版物详情页面
+    settings：目前仅配置footer和联系页面。
 
-<p align="center">
-    <br>
-    <img src="docs/screenshot.png" width="100%"/>
-    <br>
-</p>
+layout：html网页的模板
+    只继承写好的网页模板`md`文件，里面的语法动态调用配置文件中的具体内容来填充。
 
-Some examples:
-- [Demo Page](https://zihangzhen.github.io/)
-- [Personal Homepage of the author](https://zihangzhen.github.io/)
+include：网页的具体实现
+    设计到js和css排版的问题，一般不改动，可以微调。
 
-## Key Features
-- **Automatically update google scholar citations**: 增加查看具体引用文章功能。
-- **Support Google analytics**: 增加百度分析。
-- **Responsive**: 待完善，共有四种设备窗口，使用混乱。
-- **Beautiful and Simple Design**: 修改并美化布局，增加news的关闭和打开，增加一键复制引用信息，增加访客地图。
-- **Easy Coding**: 调整代码框架，数据和功能分离。
+assets：附件的存放位置
+    CV的文件、
+    论文封面图
+    网站元素等
 
-## Quick Start
+`Tips:`
+包含文件的命令：`include`和`include_relative`
+> {% include_relative _includes/news.md %}  从当前位置的相对路径进行文件包含
+> include 从`_includes`文件夹进行文件包含
 
-1. Fork this REPO and rename to `USERNAME.github.io`, where `USERNAME` is your github USERNAME.
-1. Configure the google scholar citation crawler:
-    1. Find your google scholar ID in the url of your google scholar page (e.g., https://scholar.google.com/citations?user=SCHOLAR_ID), where `SCHOLAR_ID` is your google scholar ID.
-    1. Set GOOGLE_SCHOLAR_ID variable to your google scholar ID in `Settings -> Secrets -> Actions -> New repository secret` of the REPO website with `name=GOOGLE_SCHOLAR_ID` and `value=SCHOLAR_ID`.
-    1. Click the `Action` of the REPO website and enable the workflows by clicking *"I understand my workflows, go ahead and enable them"*. This github action will generate google scholar citation stats data `gs_data.json` in `google-scholar-stats` branch of your REPO. When you update your main branch, this action will be triggered. This action will also be trigger 08:00 UTC everyday.
-1. Generate favicon using [favicon-generator](https://redketchup.io/favicon-generator) and download all generated files to `REPO/images`.
-1. Modify the configuration of your homepage `_config.yml`:
-    1. `title`: the title of your homepage
-    1. `description`: the description of your homepage
-    1. `repository`: USER_NAME/REPO_NAME
-    1. `google_analytics_id` (optional): google analytics ID
-    1. SEO Related keys (optional): get these keys from search engine consoles (e.g. Google, Bing and Baidu) and paste here.
-    1. `author`: the author information of this homepage, including some other websites, emails, city and univeristy.
-    1. More configuration details are described in the comments.
-1. Add your homepage content in `_pages/about.md`.
-    1. You can use html+markdown syntax just same as jekyll.
-    1. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For
-        ```html
-        <span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span>
-        ```
-        > Q: How to get the google scholar paper ID?
-        > A: Enter your google scholar homepage and click the paper name. Then you can see the paper ID from `citation_for_view=XXXX`, where `XXXX` is the required paper ID.
-1. Your page will be published at `https://USERNAME.github.io`.
+配置文件报错，检查缩进，使用空格不要用tab。
 
-## Debug Locally
+# 编译调试
+jekyll build --trace
+jekyll server
 
-1. Clone your REPO to local using `git clone`.
-2. Install Jekyll building environment, including `Ruby`, `RubyGems`, `GCC` and `Make` following [the installation guide](https://jekyllrb.com/docs/installation/#requirements).
-3. Run `bundle exec jekyll build` to build changes, especially those related to data. Additionally, run `bundle exec jekyll serve --incremental` to start Jekyll livereload server.
-4. Open http://127.0.0.1:4000 in your browser.
-5. If you change the source code of the website, the livereload server will automatically refresh.
-6. When you finish the modification of your homepage, `commit` your changings and `push` to your remote REPO using `git` command.
+----
+<br />
+For more details, please refer to this repository: <https://github.com/yaoyao-liu/minimal-light> and <https://jekyll-themes.com/LeNPaul/academic>.
 
-## Structure
-- **_data**: 每个模型的数据
-- **_include**: 头文件，包括js等
-- **_pages**: 页面结构
-- **_sass**: 布局，变量在_variables.scss
-- **assets**: 图、附件、js、css
-
-# Acknowledges
-
-- Acadpages incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
-- Acadpages is influenced by the github repo [acad-homepage/acad-homepage.github.io](https://github.com/RayeRen/acad-homepage.github.io), which is distributed under the MIT License.
-- Acadpages is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
-- Acadpages is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
