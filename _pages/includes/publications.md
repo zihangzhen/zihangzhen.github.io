@@ -9,8 +9,7 @@
     <div class="author">{{ link.authors }}</div>
     <p></p>
     <div class="periodical"><em>{{ link.conference}} {{link.journal}}</em></div>
-     <!-- style="color:# -->
-    <li>{{ link.notes }} <span class="show_paper_citations" data="{{ link.cited }}"></span></li>
+    <li>{{ link.notes }} <strong><span class='show_paper_citations' data='{{ link.cited }}'></span></strong></li>
     <li>{{ link.keywords }}</li>
 
     <div class="links">
@@ -35,3 +34,5 @@
   </div>
 </div>
 {% endfor %}
+<span id="total_cit" style="display: none; text-align: right; color: #888 !important;"></span>
+
