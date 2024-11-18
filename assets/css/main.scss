@@ -46,9 +46,9 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
-    
+    // border-bottom: 1px #efefef solid;
+    padding: 1em 0 1em 0;
+
 
     .paper-box-image{
         justify-content: center;
@@ -56,44 +56,70 @@
         width: 100%;
         order: 2;
         img {
-            max-width: 400px;
+            max-width: 350px;
             box-shadow: 3px 3px 6px #888;
             object-fit: cover;
+            border-radius: 5%; /* 添加圆角样式 */
         }
     }
-    
+
     .paper-box-text{
-        max-width: 100%;
-        order: 1;
+        justify-content: left;
+        padding-left: 2em;
+        max-width: 60%;
+        order: 2;
+        margin: 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 1px;
+            background-color: #efefef;
+        }
     }
-    
+
     @include breakpoint($medium) {
         .paper-box-image{
             justify-content: left;
             min-width: 200px;
-            max-width: 40%;
+            max-width: 30%;
             order: 1;
         }
-        
+
         .paper-box-text{
             justify-content: left;
             padding-left: 2em;
-            max-width: 60%;
+            max-width: 70%;
             order: 2;
-        }
+            margin: 0;
+            position: relative;
 
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 1px;
+                background-color: #efefef;
+            }
+        }
     }
 
 
 }
 
 $scroll_offset : 2em;
-h1:before, .anchor:before { 
-    content: ''; 
-    display: block; 
-    position: relative; 
-    width: 0; 
-    height: $scroll_offset; 
+h1:before, .anchor:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: $scroll_offset;
     margin-top: -$scroll_offset;
 }
 
@@ -104,6 +130,35 @@ h1:before, .anchor:before {
     margin-top: .5em;
     margin-left: -.5em;
     color: white;
-    background-color: #00369f;
+    background-color: #4E5257;
     font-size: .8em;
 }
+
+
+.title {
+    font-size: 16px; /* 设置字号为24px */
+    font-weight: bold; /* 设置字体加粗 */
+}
+
+
+a {
+    color: #77bbdb; /* 设置超链接字体颜色为深灰色 */
+    text-decoration: none !important; /* 取消超链接下划线 */
+}
+
+.small-btn {
+    background-color: #ffffff; /* 设置按钮背景颜色为白色 */
+    color: #333333; /* 设置按钮文字颜色为深灰色 */
+    padding: 8px 15px; /* 设置较小的按钮内边距 */
+    border: 1px solid #cccccc; /* 添加按钮边框 */
+    border-radius: 5px; /* 设置按钮边框圆角 */
+    font-size: 12px; /* 设置较小的按钮文字大小 */
+    cursor: pointer; /* 鼠标悬停时显示手型光标 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加按钮阴影效果 */
+    transition: box-shadow 0.3s; /* 添加过渡效果 */
+}
+
+.small-btn:hover {
+    box-shadow: 0 4px 8px rgba(35, 36, 36, 0.1); /* 鼠标悬停时按钮阴影效果变化 */
+}
+
