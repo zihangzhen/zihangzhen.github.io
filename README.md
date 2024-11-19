@@ -58,7 +58,7 @@ Some examples:
 6. When you finish the modification of your homepage, `commit` your changings and `push` to your remote REPO using `git` command.
 
 ## Structure
-- **_data**: 每个模型的数据
+- **_data**: 每个模块的数据
 - **_include**: 头文件，包括js等
 - **_pages**: 页面结构
 - **_sass**: 布局，变量在_variables.scss

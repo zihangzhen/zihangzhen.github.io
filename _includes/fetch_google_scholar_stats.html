@@ -13,7 +13,7 @@
             Array.prototype.forEach.call(citationEles, function(element, index) {
                 var paperId = element.getAttribute('data');
                 var numCitations = data['publications'][paperId]['num_citations'];
-                if (numCitations === 0) { return; } // 如果numCitations为0，跳过
+                if (numCitations === 0) { return; } // 如果numCitations为0，跳过当前论文
 
                 // 更新显示引用数的文本
                 element.innerHTML = '| Citations: ';
