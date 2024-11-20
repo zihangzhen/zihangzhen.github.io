@@ -38,7 +38,7 @@ main:
             number={1},
             pages={4073-4086}
             }
-    image: assets/images/teaser/Fed-PEMC-ieeetce.gif
+    image: assets/images/teaser/Fed-PEMC-ieeetce.jpg
     notes: SCI-Q2, IF4.3
 
   - title: A Dynamic State Sharding Blockchain Architecture for Scalable and Secure Crowdsourcing Systems
@@ -59,6 +59,6 @@ main:
               year={2024},
               publisher={Elsevier}
             }
-    image: assets/images/teaser/dssbd-jnca.jpg
+    image: assets/images/teaser/DSSBD-jnca.jpg
     notes: CCF-C, SCI-Q1, IF8.7
 

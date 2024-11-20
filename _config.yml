@@ -22,7 +22,7 @@ baidu_site_verification  :  codeva-AySkA5Tqi4 # get baidu_site_verification from
 
 # Site Author
 author:
-  name             : "Zihang Zhen"
+  name             : "Zihang Zhen <br> (镇子航)"
   avatar           : "assets/images/avatar.png"
   bio              : "Ph.D. Student"
   location         : "Wuhan, China"

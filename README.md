@@ -12,8 +12,8 @@ Acadpages
 </p>
 
 Some examples:
-- [Demo Page](https://zihangzhen.github.io/)
-- [Personal Homepage of the author](https://zihangzhen.github.io/)
+- [Demo Page 1](https://zihangzhen.github.io/)
+- [Demo Page 2](https://laujianmin.github.io/)
 
 ## Key Features
 - **Automatically update google scholar citations**: 增加查看具体引用文章功能。
