@@ -8,15 +8,19 @@
 # Site Settings
 title                    : "Zihang Zhen"
 description              : "Huazhong University of Science and Technology"
+copyright                : "Zihang Zhen"
 repository               : "zihangzhen/zihangzhen.github.io"
 google_scholar_stats_use_cdn : true
 
+darkmode: # Dark Mode Settings
+  enabled: false
+
 # google analytics
-google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
-baidu_analytics_id :  b992dcf5b7495292622baf3c03fdcd2b # https://tongji.baidu.com/
+google_analytics_id      : G-W3RDZZ1VGW # get google_analytics_id from https://analytics.google.com/analytics/
+baidu_analytics_id       : cbd3de039633afe223d2142a2cce5784 # https://tongji.baidu.com/
 
 # SEO Related
-google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
+google_site_verification :  9D203RPTZNTHS8cZmkzc2rNYC4pdQIyQBk33Spe__GI # get google_site_verification from https://search.google.com/search-console/about
 bing_site_verification   :  # get bing_site_verification from https://www.bing.com/webmasters/about
 baidu_site_verification  :  codeva-AySkA5Tqi4 # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
 

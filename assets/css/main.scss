@@ -39,7 +39,120 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+@import "colors";
 
+:root {
+    --highlight-color: #{$color-pink};
+    --background-color: #{$color-white};
+    --text-color: #{$gray-dark-light};
+    --link-color: #{$color-blue-light};
+    --button-border-color: #{$gray-light-dark};
+    --line-border-color: #{$gray-light-light};
+    --footer-bg-color: #{$color-white};
+    --footer-text-color: #{$gray-medium-light};
+    --badge-bg-color: #{$gray-dark-light};
+    --badge-text-color: #{$color-white};
+    --nav-bg-color: #{$color-white};
+    --nav-text-color: #{$gray-dark-light};
+}
+
+[data-theme="dark"] {
+    --highlight-color: #{$color-pink};
+    --background-color: #{$gray-dark-darker};
+    --text-color: #{$gray-light-dark};
+    --link-color: #{$color-blue-light};
+    --button-border-color: #{$gray-dark-dark};
+    --line-border-color: #{$gray-dark-dark};
+    --footer-bg-color: #{$gray-dark-darker};
+    --footer-text-color: #{$gray-medium-dark};
+    --button-bg-color: #{lighten($gray-dark-darker, 7%)};
+    --badge-bg-color: #{$gray-dark-dark};
+    --badge-text-color: #{$gray-light-dark};
+    --nav-bg-color: #{gray-dark-darker};
+    --nav-text-color: #{$gray-light-dark};
+}
+
+/* 基础样式 */
+$scroll_offset : 2em;
+h1:before, .anchor:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: $scroll_offset;
+    margin-top: -$scroll_offset;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none !important; /* 取消超链接下划线 */
+}
+
+/* 主题开关样式 */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+    height: 1.5em;
+    padding: 0.25em;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 1.2em;
+    width: 1.2em;
+    position: relative;
+    cursor: pointer;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+/* 侧边栏 */
+.slider {
+    background-color: transparent;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 50%;
+
+    &:before {
+        font-size: 0.8em;
+        content: "\f186";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .4s;
+        color: var(--text-color);
+    }
+}
+
+input:checked + .slider:before {
+    content: "\f185";
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+input:checked + .slider {
+    background-color: transparent;
+}
+
+/* 论文块 */
 .paper-box {
     display: flex;
     justify-content: left;
@@ -51,6 +164,7 @@
 
 
     .paper-box-image{
+        position: relative;
         justify-content: center;
         display: flex;
         width: 100%;
@@ -59,8 +173,26 @@
             max-width: 200px;
             box-shadow: 3px 3px 6px #888;
             object-fit: cover;
-            border-radius: 7%; /* 添加此行以设置圆角 */
+            border-radius: 7%;
+
+            // Add filter for dark mode
+            [data-theme="dark"] & {
+                filter: brightness(0.8) contrast(1.1) saturate(0.9);
+            }
         }
+
+        .badge {
+            position: absolute;
+            z-index: 1;  // 确保在图片之上
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-top: .5em;
+            margin-left: -.5em;
+            color: var(--badge-text-color);
+            background-color: var(--badge-bg-color);
+            font-size: .8em;
+        }
+
     }
 
     .paper-box-text{
@@ -75,7 +207,7 @@
             top: 0;
             bottom: 0;
             width: 1px; /* 竖线的宽度 */
-            background-color: #efefef; /* 竖线的颜色 */
+            background-color: var(--line-border-color); /* 竖线的颜色 */
         }
     }
 
@@ -103,27 +235,6 @@
 
 }
 
-$scroll_offset : 2em;
-h1:before, .anchor:before {
-    content: '';
-    display: block;
-    position: relative;
-    width: 0;
-    height: $scroll_offset;
-    margin-top: -$scroll_offset;
-}
-
-.badge {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: absolute;
-    margin-top: .5em;
-    margin-left: -.5em;
-    color: white;
-    background-color: #4E5257;
-    font-size: .8em;
-}
-
 
 .title {
     font-size: 16px; /* 设置字号为24px */
@@ -131,45 +242,110 @@ h1:before, .anchor:before {
 }
 
 
-a {
-    color: #77bbdb; /* 设置超链接字体颜色为深灰色 */
-    text-decoration: none !important; /* 取消超链接下划线 */
-}
-
-// 按钮风格
+/* 按钮风格  */
 .small-btn {
-    background-color: #ffffff; /* 设置按钮背景颜色为白色 */
-    color: #333333; /* 设置按钮文字颜色为深灰色 */
+    background-color: var(--button-bg-color, var(--background-color));
+    color: var(--text-color);
     padding: 8px 14px; /* 设置较小的按钮内边距 */
-    border: 1px solid #cccccc; /* 添加按钮边框 */
+    border: 1px solid var(--button-border-color); /* 添加按钮边框 */
     border-radius: 5px; /* 设置按钮边框圆角 */
     font-size: 12px; /* 设置较小的按钮文字大小 */
     cursor: pointer; /* 鼠标悬停时显示手型光标 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加按钮阴影效果 */
     transition: box-shadow 0.3s; /* 添加过渡效果 */
-}
 
-.small-btn:hover {
-    background-color: #f9f9fa; /* 稍微深一点的背景色 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 更深的阴影 */
+    &:hover {
+        background-color: var(--highlight-color);
+        color: var(--background-color);
+    }
 }
-
 
 .small-ios-btn {
     margin-top: 10px;
-    background-color: white; /* 白色背景 */
-    color: #6c757d; /* 灰色文字 */
-    border: 1px solid #e5e5ea; /* 浅灰色边框 */
+    background-color: var(--button-bg-color, var(--background-color));
+    color: var(--text-color);
+    border: 1px solid var(--button-border-color);
     padding: 6px 12px; /* 减少内边距 */
     border-radius: 12px; /* 减少圆角半径 */
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 模拟浅影 */
     font-size: 12px; /* 设置字体大小为12px */
-  }
+}
 
-  .small-ios-btn:hover {
-    background-color: #f9f9fa; /* 稍微深一点的背景色 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 更深的阴影 */
-  }
+.small-ios-btn:hover {
+background-color: #f9f9fa; /* 稍微深一点的背景色 */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* 更深的阴影 */
+}
 
+/* 页脚样式 */
+footer {
+    background-color: var(--footer-bg-color, #f5f5f5);
+    padding: 20px 0;
+    margin-left: 260px; /* 侧边栏宽度 */
+    width: calc(100% - 260px);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+footer p {
+    color: var(--footer-text-color, #666666);
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 导航栏样式 */
+.masthead {
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    a {
+        color: var(--nav-text-color);
+        &:hover {
+            color: var(--highlight-color);
+        }
+    }
+
+    // 导航菜单样式
+    .greedy-nav {
+        background-color: var(--nav-bg-color);
+
+        .visible-links {
+            a {
+                color: var(--nav-text-color);
+                &:hover {
+                    color: var(--highlight-color);
+                }
+            }
+        }
+
+        .hidden-links {
+            background-color: var(--nav-bg-color);
+            border-color: var(--button-border-color);
+
+            a {
+                color: var(--nav-text-color);
+                &:hover {
+                    color: var(--highlight-color);
+                    background-color: var(--button-bg-color);
+                }
+            }
+        }
+    }
+}
+
+// 添加简单的过渡效果
+[data-theme] {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

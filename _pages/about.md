@@ -27,13 +27,4 @@ redirect_from:
 
 {% include_relative includes/services.md %}
 
-
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=828384&w=550&t=n&d=X1hE1r5O27mChe6EsSHp4RTz-niIHZKgJQQ2nT5mJ5k&co=ffffff&ct=000000&cmo=3a97c2&cmn=DF7983'></script>
-<center><span style="color: grey; font-size: 12.5px;">Last updated:
-    <script>
-        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        var modiDate = new Date(document.lastModified);
-        var showAs = monthNames[modiDate.getMonth()] + " " + modiDate.getDate() + ", " + modiDate.getFullYear();
-        document.write(showAs);
-    </script>
-</span></center>
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=828384&w=550&t=n&d=X1hE1r5O27mChe6EsSHp4RTz-niIHZKgJQQ2nT5mJ5k&co=ffffff&ct=828384&cmo=77bbdb&cmn=df7983'></script>

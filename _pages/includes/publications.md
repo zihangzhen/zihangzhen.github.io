@@ -14,23 +14,22 @@
 
     <div class="links">
       {% if link.pdf %}
-      <a href="{{ link.pdf }}" class="small-btn" role="button" target="_blank" style="font-size:12px;">PDF</a>
-      <!-- <button class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12.5px;" onclick="window.location.href='{{ link.pdf }}'">PDF</button> -->
+        <a href="{{ link.pdf }}" class="small-btn" role="button" target="_blank">PDF</a>
       {% endif %}
       {% if link.code %}
-      <a href="{{ link.code }}" class="small-btn" role="button" target="_blank" style="font-size:12px;">Code</a>
+        <a href="{{ link.code }}" class="small-btn" role="button" target="_blank">Code</a>
       {% endif %}
       {% if link.page %}
-      <a href="{{ link.page }}" class="small-btn" role="button" target="_blank" style="font-size:12px;">Project Page</a>
+        <a href="{{ link.page }}" class="small-btn" role="button" target="_blank">Project Page</a>
       {% endif %}
       {% if link.bibtex %}
-      <button class="small-btn" role="button" target="_blank" style="font-size:12.5px;" onclick="copyToClipboard(`{{ link.bibtex }}`)">BibTex</button>
+        <button class="small-btn" style="font-size:12.5px;" onclick="copyToClipboard(`{{ link.bibtex }}`)">BibTex</button>
       {% endif %}
       {% if link.others %}
-      {{ link.others }}
+        {{ link.others }}
       {% endif %}
-
     </div>
+
   </div>
 </div>
 {% endfor %}
